@@ -5,6 +5,7 @@ import cv2
 
 k = 29
 rad = mt.radians(k)
+<<<<<<< HEAD
 cos0 = np.arange(480 ,dtype=float)
 cos=np.cos(rad)
 cos0[0] = cos
@@ -17,12 +18,27 @@ while 480>i:
         r=r-pxtheta
     else:
         r=r+pxtheta
+=======
+pxtheta = rad/240
+print(pxtheta)
+pxk = mt.degrees(pxtheta)
+print(pxk)
+
+i=1
+cos0 = np.arange(480 ,dtype=float)
+cos=np.cos(rad)
+cos0[0] = cos
+r=rad-pxtheta
+>>>>>>> f260bbc73c5a96c1e2d6320b3383340bbdbc7577
 while 480>i:    
     r=r-pxtheta
     cos=np.cos(r)
     cos0[i]=cos
     i = i+1
+<<<<<<< HEAD
     i = i+1
+=======
+>>>>>>> f260bbc73c5a96c1e2d6320b3383340bbdbc7577
 
 config = rs.config()
 config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 15)
